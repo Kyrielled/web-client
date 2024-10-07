@@ -7,4 +7,5 @@ function getRandomInt(max) {
 
 color.onclick = () => {
     allcookies = document.cookie;
+    alert(allcookies);
 }
