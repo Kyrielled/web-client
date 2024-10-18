@@ -1,10 +1,6 @@
-<form method="post" action="http://challenge01.root-me.org/web-client/ch22/index.php?action=login">
+<form method="post" action="http://challenge01.root-me.org/web-client/ch22/index.php?action=profile">
 		<div>
 		<input type="text" name="username" value="admin">
-		</div>
-		<br>
-		<div>
-		<input type="password" name="password" value="bonjour">
 		</div>
 		<br>
 		<button type="submit">Sign in</button>
