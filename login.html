@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Self XSS DOM Secrets - Secrets Keeper</title>
+    <meta charset="UTF-8">
+
+    <!--- favicon -->
+    <link rel="icon" type="image/png" href="/static/images/rootme.png"/>
+
+    <!--- css -->
+    <link rel="stylesheet" property="stylesheet" type="text/css" href="/static/css/style.css" media="all">
+</head>
+<body>
+<h1>Secrets Keeper</h1>
+
+<div style="display: flex; margin: auto; text-align: center; justify-content: center;">
+    <p>
+        <a href="/login">Login</a> | <a href="/profile">Profile</a> | <a href="/report">Report</a>
+    </p>
+</div>
+
+<hr class="mgb-2">
+<div style="display: flex; margin: auto; text-align: center; justify-content: center;">
+    <fieldset style="width: 50%">
+        <legend>Login</legend>
+        <form method="POST" action="/login">
+            <label>Username</label><br>
+            <input id="username" class="mgb-1" name="username"></input><br>
+            <label>Secret</label><br>
+            <input id="secret" class="mgb-1" name="secret"></input><br>
+            <button class="mgb-1" type="submit">Login</button>
+        </form>
+    </fieldset>
+</div>
+</body>
+</html>
