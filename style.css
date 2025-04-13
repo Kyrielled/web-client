@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300&display=swap');
+
+*, html, body, table, tr, td, frame { 
+    margin: 0; 
+    padding: 0;
+}
+html, body { height: 100%;}
+
+body {
+
+    font-family: 'Azeret Mono', monospace;
+    font-size: 15px;
+    line-height: 1.42857;
+    color: #767676;
+    background: #edecec;
+    height: calc(100vh - 82px);
+    position: relative;
+    padding: 82px 40px 0 40px !important;
+}
+
+a {color: #2ba6cb; text-decoration: none;}
+a:hover{  cursor: pointer;}
+a:hover, a:focus{  color: #258faf;}
+
+button {
+	background-color: white;
+	border-radius: 6px;
+	border: 1px solid #dcdcdc;
+	cursor: pointer;
+	color: #767676;
+	font-weight: bold;
+	padding: 6px 24px;
+}
+button:hover {	background-color: #f9f9f9; }
+
+fieldset { padding: 5px 10px; }
+fieldset legend { padding: 0 5px; }
+
+h1,p,legend,form,div { text-align: center; }
+
+i {
+    background: white;
+    border-radius: 20px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    padding: 50px;
+    margin: 0 auto;
+}
+
+input,textarea {
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    border: 5px;
+}
+
+textarea {
+    width: 40%;
+    height: 150px;
+}
+
+.center { 
+    text-align: center;
+}
+
+.center-img {
+    text-align: center;
+    margin: auto;
+    display: flex;
+}  
+img { display:block; }
+
+.hr-message {
+    margin: auto;
+    width: 30%;
+}
+
+.pb-1 { padding-bottom: 20px; }
+.mgt-1 { margin-top: 20px; }
+.mgt-2 { margin-top: 40px; }
+.mgb-1 { margin-bottom: 20px; }
+.mgb-2 { margin-bottom: 40px; }
+
+table, th, td {
+    border: 1px solid #767676;
+    border-collapse:separate;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+table { border-radius:6px; }
+td { height: 200px; }
+
+iframe {
+    width: 40%; 
+    height: 150px;
+    border: 1px solid #767676;
+}
+
+/* ** Upload ** */
+
+.drop-zone {
+    background-color: #C8DADF;
+    
+    margin-right: auto;
+    margin-left: auto;
+
+    padding: 10px;
+    width: 30%;
+}
+
+.drop-zone-line {
+    border-style: dotted;
+}
